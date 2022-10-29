@@ -3,8 +3,7 @@ const app = express();
 const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
- 
-app.use(router)
+  
 app.use(cors());
 
 const server = http.createServer(app);
@@ -35,7 +34,7 @@ io.on("connection", (socket) => {
 
 
 
-server.listen("https://chat-server-two.vercel.app/", () => {
+server.listen(5001, () => {
   console.log("SERVER RUNNING");
 }); 
  
